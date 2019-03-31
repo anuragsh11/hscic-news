@@ -1,4 +1,4 @@
-Raik = not available
+#Raik = not available
 Cache create for result 1
 curl -s -X PUT -H "Content-Type: text/plain" -d "0 1 2 3 4 5 6" "http://$RIAK_HTTP_IP:$RIAK_HTTP_PORT/buckets/$RIAK_TEST_BUCKET/keys/“Care,Quality,Commission"
 Cache create for result 2
