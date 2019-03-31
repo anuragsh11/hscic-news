@@ -1,18 +1,18 @@
-#Raik = not available
+Raik = not available
 Cache create for result 1
-curl -s -X PUT -H "Content-Type: text/plain" -d "0 1 2 3 4 5 6" "http://$RIAK_HTTP_IP:$RIAK_HTTP_PORT/buckets/$RIAK_TEST_BUCKET/keys/ìCare,Quality,Commission"
+curl -s -X PUT -H "Content-Type: text/plain" -d "0 1 2 3 4 5 6" "http://$RIAK_HTTP_IP:$RIAK_HTTP_PORT/buckets/$RIAK_TEST_BUCKET/keys/‚ÄúCare,Quality,Commission"
 Cache create for result 2
-Cache create for result 2 curl -s -X PUT -H "Content-Type: text/plain" -d ì9î "http://$RIAK_HTTP_IP:$RIAK_HTTP_PORT/buckets/$RIAK_TEST_BUCKET/keys/ìSeptember,2004"
+Cache create for result 2 curl -s -X PUT -H "Content-Type: text/plain" -d ‚Äú9‚Äù "http://$RIAK_HTTP_IP:$RIAK_HTTP_PORT/buckets/$RIAK_TEST_BUCKET/keys/‚ÄúSeptember,2004"
 Cache create for result 3
-Cache create for result 3 curl -s -X PUT -H "Content-Type: text/plain" -d ì6 8î "http://$RIAK_HTTP_IP:$RIAK_HTTP_PORT/buckets/$RIAK_TEST_BUCKET/keys/ìgeneral,population,generally"
+Cache create for result 3 curl -s -X PUT -H "Content-Type: text/plain" -d ‚Äú6 8‚Äù "http://$RIAK_HTTP_IP:$RIAK_HTTP_PORT/buckets/$RIAK_TEST_BUCKET/keys/‚Äúgeneral,population,generally"
 Cache create for result 4
-Cache create for result 4 curl -s -X PUT -H "Content-Type: text/plain" -d ì1î "http://$RIAK_HTTP_IP:$RIAK_HTTP_PORT/buckets/$RIAK_TEST_BUCKET/keys/ìCare,Quality,Commission,admission"
+Cache create for result 4 curl -s -X PUT -H "Content-Type: text/plain" -d ‚Äú1‚Äù "http://$RIAK_HTTP_IP:$RIAK_HTTP_PORT/buckets/$RIAK_TEST_BUCKET/keys/‚ÄúCare,Quality,Commission,admission"
 Cache create for result 5
-Cache create for result 5 curl -s -X PUT -H "Content-Type: text/plain" -d ì6î "http://$RIAK_HTTP_IP:$RIAK_HTTP_PORT/buckets/$RIAK_TEST_BUCKET/keys/ìgeneral,population,Alzheimer"
-$KEY = ìCare,Quality,Commissionî
+Cache create for result 5 curl -s -X PUT -H "Content-Type: text/plain" -d ‚Äú6‚Äù "http://$RIAK_HTTP_IP:$RIAK_HTTP_PORT/buckets/$RIAK_TEST_BUCKET/keys/‚Äúgeneral,population,Alzheimer"
+$KEY = ‚ÄúCare,Quality,Commission‚Äù
 
 Retrive data from cache
-Retrive data from cache CACHE_VALUE=$(redis-cli -h "$CACHE_PROXY_IP" -p "$CACHE_PROXY_PORT" "$RIAK_TEST_BUCKET:$KEYî)
+Retrive data from cache CACHE_VALUE=$(redis-cli -h "$CACHE_PROXY_IP" -p "$CACHE_PROXY_PORT" "$RIAK_TEST_BUCKET:$KEY‚Äù)
 Insert value with index
 Curl -X put -H "Content-Type: text/plain" -d "April 15 , 2013 Thousands of GP practices ..." http://localhost:8098/buckets/indexname/hscicNews/keys/RESULT:5
 Display key for document June 2013
